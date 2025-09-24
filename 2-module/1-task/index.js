@@ -1,11 +1,15 @@
 function sumSalary(salaries) {
-  let sumSal = [];
+  let sumOfSalary = 0;
+
   for (let prop in salaries) {
-    if (Number.parseInt(salaries[prop])) {
-      sumSal.push(salaries[prop]);
+    let isSalary = typeof salaries[prop] === 'number' && Number.isFinite(salaries[prop]);
+
+    if (isSalary) {
+      sumOfSalary += salaries[prop];
     }
   }
-  return sumSal.reduce((sum, value) => sum + value, 0);
+
+  return sumOfSalary;
 }
 
 
