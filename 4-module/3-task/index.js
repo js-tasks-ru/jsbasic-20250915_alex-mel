@@ -1,3 +1,3 @@
 function highlight(table) {
-  // ваш код...
+  console.log(table.rows[1].cells[2].dataset);
 }
